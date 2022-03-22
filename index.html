@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" async></script>
+    </head>
+    <body onload="ParsePesel('pesel');">
+        
+        
+        
+            <form method="POST" action="connect.php">
+                
+                    <div><h1>Wypełnij formularz</h1></div>
+                    <hr/>
+                <div>
+                    <label for="uname"><strong>Imię</strong></label>
+                    <span id="hasErrorname" style="color:Red;" title="Min 3 znaki. Max 20 znaków">*</span>
+                    <input id="pname" name="pname" type="text"/>
+                    
+                    <label for="uname"><strong>Nazwisko</strong></label>
+                    <span id="hasErrorsurname" style="color:Red;" title="Min 3 znaki. Max 30 znaków">*</span>
+                    <input id="psurname" name="psurname" type="text"/>
+                    
+                    <label for="uname"><strong>PESEL</strong></label>
+                    <span id="hasError" style="color:Red;" title="PESEL - jedynie cyfry. Musi posiadać długość 11 znaków.">*</span>
+                    <input id="pesel" name="pesel" type="text" onkeyup="ParsePesel('pesel');"/>
+                    
+                    <label for="uname"><strong>Rok</strong></label>
+                    <input id="pyear" name="pyear" type="text"/>
+                    <label for="uname"><strong>Miesiąc</strong></label>
+                    <input id="pmonth" name="pmonth" type="text"/>
+                    <label for="uname"><strong>Dzień</strong></label>
+                    <input id="pday" name="pday" type="text"/>
+                </div>
+                    
+                
+                    <button type="submit" onclick="myFunction()">Dodaj</button>
+            </form>
+            
+        
+
+    </body>
+</html>
